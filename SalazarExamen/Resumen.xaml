@@ -24,10 +24,10 @@
                 <Label Text="Nombre:" TextColor="Black"  Grid.Row="0" Grid.Column="0"/>
                 <Entry x:Name="txtNombre" Grid.Row="0" Grid.Column="1" IsReadOnly="True"/>
 
-                <Label Text="Monto Inicial:" TextColor="Black"  Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Pago Inicial:" TextColor="Black"  Grid.Row="1" Grid.Column="0"/>
                 <Entry x:Name="txtMonto" Keyboard="Numeric" Grid.Row="1" Grid.Column="1" IsReadOnly="True"/>
 
-                <Label Text="Pago Total:" TextColor="Black"  Grid.Row="2" Grid.Column="0"/>
+                <Label Text="Total a Pagar:" TextColor="Black"  Grid.Row="2" Grid.Column="0"/>
                 <Entry x:Name="txtPago" IsReadOnly="True" Grid.Row="2" Grid.Column="1"/>
 
             </Grid>

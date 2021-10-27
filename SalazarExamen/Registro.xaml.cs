@@ -32,9 +32,13 @@ namespace SalazarExamen
 				}
 				else
 				{
-					PagoMensual = Math.Round((1800 - Monto) / 3 + (1800 * 0.05),2);
+					PagoMensual = Math.Round((1800 - Monto) / 3 + (1800 * 0.05),3);
 					txtPago.Text = PagoMensual.ToString();
 				}
+			}
+			catch (NullReferenceException)
+			{
+				DisplayAlert("Alerta", "Ingrese los datos solicitados", "ok");
 			}
 			catch (Exception ex)
 			{
@@ -47,7 +51,7 @@ namespace SalazarExamen
 		{
 			try
 			{
-				string User, Name, PagoMensual;
+				string User, Name, PagoMensual, MontoInicial;
 
 				if (txtNombre.Text.Equals(""))
 				{
@@ -58,8 +62,9 @@ namespace SalazarExamen
 					User = lblUsuario.Text;
 					Name = txtNombre.Text;
 					PagoMensual = txtPago.Text;
+					MontoInicial = txtMonto.Text;
 					await DisplayAlert("Mensaje", "Elemento guardado con exito", "OK");
-					await Navigation.PushAsync(new Resumen(User, Name, PagoMensual));
+					await Navigation.PushAsync(new Resumen(User, Name, MontoInicial, PagoMensual));
 				}
 
 			}

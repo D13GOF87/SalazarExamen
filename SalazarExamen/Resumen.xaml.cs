@@ -12,21 +12,22 @@ namespace SalazarExamen
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Resumen : ContentPage
 	{
-		public Resumen(String user, String name, String pagoMensual)
+		public Resumen(string user, string name, string montoInicial, string pagoMensual)
 		{
 			InitializeComponent();
 			lblUsuario.Text = user;
 			txtNombre.Text = name;
-			calcularMonto(pagoMensual);
+			txtMonto.Text = montoInicial;
+			CalcularMonto(pagoMensual);
 		}
 
-		private void calcularMonto(String PagoMensual)
+		private void CalcularMonto(string PagoMensual)
 		{
 			double pagoMensual = 0;
 			try
 			{
-				pagoMensual = 3 * Convert.ToDouble(PagoMensual);
-				txtMonto.Text = pagoMensual.ToString();
+				pagoMensual = Math.Round(3 * Convert.ToDouble(PagoMensual),2);
+				txtPago.Text = pagoMensual.ToString();
 
 			}
 			catch (Exception ex)
