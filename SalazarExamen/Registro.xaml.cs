@@ -14,5 +14,10 @@ namespace SalazarExamen
 		{
 			InitializeComponent();
 		}
+
+		private void btnIngresar_Clicked(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

@@ -8,7 +8,9 @@
                Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
 
         <Entry x:Name="txtUsuario" Placeholder="Usuario"/>
-        <Entry x:Name="txtClave" Placeholder="Contraseña"/>
+        <Entry x:Name="txtClave" Placeholder="Contraseña" IsPassword="True"/>
+
+        <Button x:Name="btnIngresar" Text="Login" Clicked="btnIngresar_Clicked"/>
 
     </StackLayout>
 
