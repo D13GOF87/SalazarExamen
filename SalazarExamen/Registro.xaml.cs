@@ -57,7 +57,7 @@ namespace SalazarExamen
 				{
 					User = lblUsuario.Text;
 					Name = txtNombre.Text;
-					PagoMensual = txtPago.Text
+					PagoMensual = txtPago.Text;
 					await DisplayAlert("Mensaje", "Elemento guardado con exito", "OK");
 					await Navigation.PushAsync(new Resumen(User, Name, PagoMensual));
 				}
