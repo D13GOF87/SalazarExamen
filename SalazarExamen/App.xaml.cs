@@ -1,6 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace SalazarExamen
 {
@@ -10,7 +8,7 @@ namespace SalazarExamen
 		{
 			InitializeComponent();
 
-			MainPage = new Registro();
+			MainPage = new NavigationPage(new Login());
 		}
 
 		protected override void OnStart()
